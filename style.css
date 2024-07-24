@@ -195,17 +195,25 @@ body {
 }
 
 /*================ Qualifications Page ==================*/
+.qualification-heading2 {
+    font-size: 8rem;
+    text-align: center;
+    margin-top: 15rem;
+}
+
+.qualification-heading {
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
 .qualification {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 3rem;
-    padding-left: 30px;
-    margin-top: 130px;
+    padding: 100px 15px;
 }
 
 .qualification h2 {
-    font-size: 60px;
+    margin-bottom: 5rem;
+    font-size: 90px;
     line-height: 1;
     text-align: center;
     padding-bottom: 50px;
@@ -215,85 +223,99 @@ body {
     color: #0ef;
 }
 
-.qualification h4 {
-    margin: 15px 0;
-    color: rgb(228,228,228);
+.timeline-items {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-items::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    left: calc(50% - 1px);
+    background-color: #0ef;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    padding-left: calc(50% + 30px);
+}
+
+.timeline-dot {
+    height: 21px;
+    width: 21px;
+    background-color: #0ef;
+    box-shadow: 0 0 25px #0ef,
+        0 0 50px #0ef;
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.timeline-date {
     font-size: 20px;
     font-weight: 600;
+    color: white;
+    margin: 6px 0 15px;
 }
 
-.qualification_tabs {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: var(--mb-0);
-}
-
-.qualification_button {
-    font-size: var(--h2-font-size);
-    font-weight: 600;
+.timeline-content {
+    background-color: #000;
+    border-color: #0ef;
+    padding: 20px 30px;
+    border-radius: 4rem;
+    box-shadow:  0 0 10px #0ef;
     cursor: pointer;
-    align-items: center;
+    transition: 0.3s ease-in-out;
 }
 
-.qualification_button:hover {
-    color: var(--first-color);
+.timeline-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #0ef;
 }
 
-.qualification_icon {
-    font-size: 2rem;
-    margin-right: var(--mb-0-25);
+.timeline-content h3 {
+    font-size: 20px;
+    color: white;
+    margin: 0 0 10px;
+    font-weight: 600;
 }
 
-.qualification_data {
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    column-gap: 3rem;
+.timeline-content p {
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
 }
 
-.qualification_title {
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
+::-webkit-scrollbar {
+    width: 15px;
 }
 
-.qualification_subtitle {
-    display: inline-block;
-    font-size: var(--small-font-size);
-    margin-bottom: var(--mb-2);
-}
-
-.qualification_calendar {
-    font-size: var(--smaller-font-size);
-    color: var(--text-color-light);
-}
-
-.qualification_rounder {
-    display: inline-block;
-    width: 13px;
-    height: 13px;
+::-webkit-scrollbar-thumb {
     background-color: #0ef;
-    color: #0ef;
-    border-radius: 50%;
 }
 
-.qualification_line {
-    display: block;
-    width: 1px;
-    height: 100%;
-    background-color: #0ef;
-    transform: translate(6px, -7px);
-}
 
-.qualification [data-content] {
-    display: none;
-}
-
-.qualification_active[data-content] {
-    display: block;
-}
-
-.qualification_button.qualification_active {
-    color: #0ef;
-}
 
 /*================ Contact Me Page ==================*/
 .contact {
