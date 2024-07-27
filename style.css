@@ -295,7 +295,7 @@ span {
     margin-top: 2rem;
 }
 
-.skills .container .row{
+.skills .container .row {
     display: grid;
     grid-template-columns: repeat(5, 2fr);
     flex-wrap: wrap;
@@ -335,7 +335,41 @@ span {
     height: 9rem;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:1150px) {
+  .skills .container {
+      margin: 0;
+      padding: 0;
+  }
+  .skills .container .row {
+      grid-template-columns: repeat(4, 1fr);
+      margin: 1rem;
+      padding: 2rem 0.2rem 2rem 0.2rem;
+      gap: 1rem;
+  }
+  .skills .container {
+      margin-top: 5px;
+      width: 100%;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .skills .container {
+      margin: 0;
+      padding: 0;
+  }
+  .skills .container .row {
+      grid-template-columns: repeat(3, 1fr);
+      margin: 1rem;
+      padding: 2rem 0.2rem 2rem 0.2rem;
+      gap: 1rem;
+  }
+  .skills .container {
+      margin-top: 5px;
+      width: 100%;
+  }
+}
+
+@media screen and (max-width:650px) {
     .skills .container {
         margin: 0;
         padding: 0;
@@ -460,7 +494,7 @@ span {
   }
   
   .timeline-content h3 {
-    font-size: 20px;
+    font-size: 1.8rem;
     color: white;
     margin: 0 0 10px;
     font-weight: 600;
@@ -468,7 +502,7 @@ span {
   
   .timeline-content p {
     color: white;
-    font-size: 18px;
+    font-size: 1.6rem;
     font-weight: 300;
     line-height: 22px;
   }
