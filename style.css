@@ -749,6 +749,32 @@ span {
     font-weight: 300;
     line-height: 22px;
   }
+
+  @media only screen and (max-width: 768px) {
+    .qualification-heading2,
+    .experience h2,
+    .timeline-content h3,
+    .timeline-content p {
+      font-size: 1.8rem;
+    }
+  
+    .timeline-date {
+      font-size: 16px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .qualification-heading2,
+    .experience h2,
+    .timeline-content h3,
+    .timeline-content p {
+      font-size: 1.4rem;
+    }
+  
+    .timeline-date {
+      font-size: 14px;
+    }
+  }
   
   ::-webkit-scrollbar {
     width: 15px;
